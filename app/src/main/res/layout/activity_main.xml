@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvExpression"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="end"
+        android:textColor="#BBBBBB"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="sin(30) + log(100)" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="end"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvExpression"
+        tools:text="2.5" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:columnCount="4"
+        android:padding="8dp"
+        android:rowCount="8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvResult">
+
+        <!-- Row 1 -->
+        <Button style="@style/ScientificButton" android:text="@string/btn_sin" />
+        <Button style="@style/ScientificButton" android:text="@string/btn_cos" />
+        <Button style="@style/ScientificButton" android:text="@string/btn_tan" />
+        <Button style="@style/ScientificButton" android:text="@string/btn_log" />
+
+        <!-- Row 2 -->
+        <Button style="@style/ScientificButton" android:text="@string/btn_ln" />
+        <Button style="@style/ScientificButton" android:text="@string/btn_sqrt" />
+        <Button style="@style/ScientificButton" android:text="@string/btn_pow" />
+        <Button style="@style/ScientificButton" android:text="@string/btn_fact" />
+
+        <!-- Row 3 -->
+        <Button style="@style/ScientificButton" android:text="@string/btn_pi" />
+        <Button style="@style/ScientificButton" android:text="@string/btn_e" />
+        <Button style="@style/ScientificButton" android:text="@string/btn_open_bracket" />
+        <Button style="@style/ScientificButton" android:text="@string/btn_close_bracket" />
+
+        <!-- Row 4 -->
+        <Button style="@style/ControlButton" android:text="@string/btn_ac" />
+        <Button style="@style/ControlButton" android:text="@string/btn_c" />
+        <Button style="@style/OperatorButton" android:text="@string/btn_mod" />
+        <Button style="@style/OperatorButton" android:text="@string/btn_div" />
+
+        <!-- Row 5 -->
+        <Button style="@style/NumberButton" android:text="@string/btn_7" />
+        <Button style="@style/NumberButton" android:text="@string/btn_8" />
+        <Button style="@style/NumberButton" android:text="@string/btn_9" />
+        <Button style="@style/OperatorButton" android:text="@string/btn_mul" />
+
+        <!-- Row 6 -->
+        <Button style="@style/NumberButton" android:text="@string/btn_4" />
+        <Button style="@style/NumberButton" android:text="@string/btn_5" />
+        <Button style="@style/NumberButton" android:text="@string/btn_6" />
+        <Button style="@style/OperatorButton" android:text="@string/btn_sub" />
+
+        <!-- Row 7 -->
+        <Button style="@style/NumberButton" android:text="@string/btn_1" />
+        <Button style="@style/NumberButton" android:text="@string/btn_2" />
+        <Button style="@style/NumberButton" android:text="@string/btn_3" />
+        <Button style="@style/OperatorButton" android:text="@string/btn_add" />
+
+        <!-- Row 8 -->
+        <Button style="@style/NumberButton" android:layout_columnSpan="2" android:layout_gravity="fill" android:text="@string/btn_0" />
+        <Button style="@style/NumberButton" android:text="@string/btn_dot" />
+        <Button style="@style/EqualButton" android:text="@string/btn_equal" />
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
